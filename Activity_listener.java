@@ -11,19 +11,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-public class Activity_listener extends Activity implements OnClickListener{
-        Button tinhTong;
-        EditText edita,editb;
-        TextView txtkq_activity_listener;
+public class Activity_listener extends Activity implements OnClickListener{ 
+        Button tinhTong; //tạo biến tính tổng bằng kiểu Button
+        EditText edita,editb; // tạo biến edita và aditb để lưu giá trị của số a và b
+        TextView txtkq_activity_listener;// tạo biến kết quả
         @SuppressLint({"ResourceType", "WrongViewCast"})
         protected void onCreate(Bundle saveInstanceState) {
 
             super.onCreate(saveInstanceState);
             setContentView(R.layout.activity_main);
-            tinhTong = (Button) findViewById(R.layout.activity_listener);
+            tinhTong = (Button) findViewById(R.layout.activity_listener); 
             tinhTong.setOnClickListener(this);
-             edita = (EditText) findViewById(R.id.nhapsoa);
-             editb = (EditText) findViewById(R.id.nhapsob);
+             edita = (EditText) findViewById(R.id.nhapsoa); //gán giá trị của ký tự vừa nhập vào adita
+             editb = (EditText) findViewById(R.id.nhapsob); //gán giá trị của ký tự vừa nhập vào aditb
 
 
         }
@@ -31,8 +31,8 @@ public class Activity_listener extends Activity implements OnClickListener{
 
     @Override
     public void onClick(View v) {
-        int a = Integer.parseInt(edita.getText() + "");
-        int b = Integer.parseInt(editb.getText() + "");
+        int a = Integer.parseInt(edita.getText() + "");//chuyển kiểu từ editText sang interger của số a
+        int b = Integer.parseInt(editb.getText() + "");//chuyển kiểu từ editText sang interger của số b
         txtkq_activity_listener = (TextView) findViewById(R.id.txtkq_activity_listener);
         txtkq_activity_listener.setText(a+b +"");
     }
