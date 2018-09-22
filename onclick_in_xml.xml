@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:layout_gravity="center"
+    >
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:stretchColumns="*">
+        <TableRow
+            android:layout_height="50dp">
+            <TextView
+                android:background="#003cff"
+                android:layout_span="5"
+                android:text=" Các kiểu lập trình sự kiện"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_span="1"
+                android:text="Số a:"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_span="3"
+                android:id="@+id/soa"
+                android:hint="nhap so a"
+
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_span="1"
+                android:text="Số b:"
+                android:textStyle="italic"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:layout_span="3"
+                android:id="@+id/sob"
+                android:hint="nhap so b"
+
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_span="1"
+                android:layout_height="30dp"
+                android:text="Kết qua cộng là:"/>
+            <TextView
+                android:background="#2bcc16"
+                android:layout_span="4"
+                android:id="@+id/txtkq_activity_listener"
+                android:textColor="@color/colorPrimaryDark"
+                />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/btntong2so"
+                android:layout_span="5"
+                android:layout_height="wrap_content"
+                android:onClick="btn_tong2so"
+                android:text="Tổng 2 sô"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
